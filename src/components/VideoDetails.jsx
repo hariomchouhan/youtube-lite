@@ -49,7 +49,8 @@ const VideoDetails = () => {
               controls
               width="100%"
               height="100%"
-              style={{ background: "#000000" }}
+              style={{ background: "#000000" }} 
+              playing
             />
           </div>
           <div className="text-white font-bold text-sm md:text-xl mt-4 line-clamp-2">
