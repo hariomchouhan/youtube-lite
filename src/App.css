@@ -1,1 +1,4 @@
 /* write your css here */
+::-webkit-scrollbar {
+    display: none;
+}
