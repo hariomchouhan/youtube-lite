@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { fetchDataFromApi } from "../utils/api";
 
-const Context = createContext();
+export const AppContext = createContext();
 
 export const AppContextProvider = (props) => {
   const [loading, setLoading] = useState(false);
@@ -18,8 +18,8 @@ export const AppContextProvider = (props) => {
     fetchDataFromApi(`search/?q=${query}`).then(({contents}) => {
         console.log(contents);
         setSearchResults(contents)
+        setLoading(false)
     })
-    setLoading(false)
   };
 
   const value = {
@@ -32,5 +32,5 @@ export const AppContextProvider = (props) => {
     mobileMenu,
     setMobileMenu,
   };
-  return <Context.Provider value={value}>{props.children}</Context.Provider>;
+  return <AppContext.Provider value={value}>{props.children}</AppContext.Provider>;
 };
