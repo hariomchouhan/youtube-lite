@@ -1,8 +1,11 @@
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 
 function App() {
   return (
-    <div className="text-4xl">Jay Shri Ram</div>
+    <BrowserRouter>
+      <div className="text-4xl">Jay Shri Ram</div>
+    </BrowserRouter>
   );
 }
 
