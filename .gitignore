@@ -12,6 +12,8 @@
 /build
 
 # misc
+/Data
+key.js
 .DS_Store
 .env.local
 .env.development.local

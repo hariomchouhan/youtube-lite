@@ -26,20 +26,29 @@ const SearchResultVideoCard = ({ video }) => {
           <div className="hidden md:flex items-center">
             <div className="flex items-start mr-3">
               <div className="flex w-9 h-9 rounded-full overflow-hidden">
-                <img src={video?.author?.avatar[0]?.url} alt="" className="h-full w-full object-cover"/>
+                <img
+                  src={video?.author?.avatar[0]?.url}
+                  alt=""
+                  className="h-full w-full object-cover"
+                />
               </div>
             </div>
             <div className="flex flex-col">
               <span className="text-sm font-semibold mt-2 text-white/[0.7] flex items-center">
-              {video?.author?.title}
-              {video?.author?.badges[0]?.type === "VERIFIED_CHANNEL" && (
-                <BsFillCheckCircleFill className="text-white/[0.5] text-[12px] ml-1" />
-              )}
+                {video?.author?.title}
+                {video?.author?.badges[0]?.type === "VERIFIED_CHANNEL" && (
+                  <BsFillCheckCircleFill className="text-white/[0.5] text-[12px] ml-1" />
+                )}
               </span>
               <div className="flex text-sm font-semibold text-white/[0.7] truncate overflow-hidden">
-              <span>{`${abbreviateNumber(video?.stats?.views, 2)} views`}</span>
-              <span className="flex text-[24px] leading-none font-bold text-white/[0.7] relative top-[-10px] mx-1">.</span>
-              <span className="truncate">{video?.publishedTimeText}</span>
+                <span>{`${abbreviateNumber(
+                  video?.stats?.views,
+                  2
+                )} views`}</span>
+                <span className="flex text-[24px] leading-none font-bold text-white/[0.7] relative top-[-10px] mx-1">
+                  .
+                </span>
+                <span className="truncate">{video?.publishedTimeText}</span>
               </div>
             </div>
           </div>
